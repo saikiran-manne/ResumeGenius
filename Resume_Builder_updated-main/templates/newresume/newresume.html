@@ -1,0 +1,35 @@
+{%load static%}
+<html>
+    <head>
+        <title> newresume</title>
+        <link rel="stylesheet"  href="{% static "stylesheet/style1.css" %}"/>
+        <style>
+            /* Increase the width of all form input fields */
+            .form-container input[type="text"],
+            .form-container input[type="email"]{
+                width: 500px; /* You can adjust the width value */
+                height:50px;
+            }
+            textarea {
+                width: 500px; /* Adjust the width as needed */
+                height: 50px; /* Adjust the height as needed */
+                }
+        </style>
+    </head>
+
+<body>
+
+    <h1 style="color:red;text-align:center"> Please fill the below form to create "RESUME" </h1>
+    <div class="form-container"  style="text-align: center; margin: auto; width: 60%;">
+    <form method='POST' action="{% url 'generatepdf' %}">
+        <table class="form-table" style=" margin: 20px auto; width: 100%;border-collapse: collapse;">
+            {{form.as_table}}
+        </table>
+
+            <input class="form-submit" type='submit' value='submit' style=" margin-top: 10px; height:40px; width:200px"/>
+            {% csrf_token %}
+    </form>
+    </div>
+
+</body>
+</html>

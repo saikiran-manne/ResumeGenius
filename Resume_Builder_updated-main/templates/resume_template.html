@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresher Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Fresher Resume</h1>
+    </header>
+
+    <section>
+        <h2>Personal Information</h2>
+        <ul>
+            <li><strong>Name:</strong> {{ name }}</li>
+            <li><strong>Email:</strong> {{ email }}</li>
+            <li><strong>Contact:</strong> {{ contact }}</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <ul>
+            <li><strong>School:</strong> {{ school }}</li>
+            <li><strong>Degree:</strong> {{ degree }}</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <p>{{ skills }}</p>
+    </section>
+
+    <section>
+        <h2>About Me</h2>
+        <p>{{ about_you }}</p>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <p>{{ experience }}</p>
+    </section>
+</body>
+
+</html>
